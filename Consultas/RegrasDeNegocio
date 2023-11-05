@@ -1,0 +1,37 @@
+Consultas que respondem as questões para as regras de negócio
+01 - Qual seria o número de cadastros atualmente no banco de dados ativos e inativos?
+--caso o cadastro esteja ativo - 1, caso inativo - 0
+SELECT
+  SUM(CASE WHEN ativo = 1 THEN 1 ELSE 0 END) AS TotalCadastrosAtivos,
+  SUM(CASE WHEN ativo = 0 THEN 1 ELSE 0 END) AS TotalCadastrosInativos
+  FROM Cliente;
+
+
+02 - Qual é número de transações diária efetuada pelos clientes?
+SELECT
+    CONVERT(date, T.data) AS DataTransacao, --converter transacao para data
+    COUNT(*) AS NumeroTransacoes,
+    C.nome AS Responsavel 
+FROM Transacao T 
+JOIN Cliente C ON T.id_cliente = C.id_cliente --combina tabela transacao com tabela cliente
+GROUP BY CONVERT(date, T.data), C.nome;
+
+
+03 - Qual o valor total movimentado anualmente pelos clientes?
+SELECT
+    YEAR(T.data) AS Ano,
+    SUM(T.valor) AS ValorTotalMovimentado,--soma os valores movimentados por cada pessoa
+    C.nome AS Responsavel
+FROM Transacao T
+JOIN Cliente C ON T.id_cliente = C.id_cliente -- une transação com cliente
+GROUP BY YEAR(T.data), C.nome
+ORDER BY Ano ASC;
+
+
+04 - Qual o valor total arrecadado mensalmente com o câmbio de moeda?
+-- Essa consulta agrupa os registros pelo mês e ano do campo "dt_cambio", e então calcula e ordena os resultados pelo mês e ano na forma "ano-mes"
+SELECT FORMAT(dt_cambio, 'yyyy-MM') AS Mes, SUM(valor_dest) AS ValorTotal
+FROM Cambio
+WHERE FORMAT(dt_cambio, 'yyyy-MM') = '2023-06' -- Substitua 'yyyy-MM' pelo mês desejado
+GROUP BY FORMAT(dt_cambio, 'yyyy-MM')
+ORDER BY FORMAT(dt_cambio, 'yyyy-MM');
