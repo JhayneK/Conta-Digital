@@ -23,9 +23,8 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - React
-- JavaScript
+- Python
 - Git e Github
-- Figma
 - Banco de Dados Microsoft Azure
 - MySQL
   
