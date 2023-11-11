@@ -1,61 +1,70 @@
-# Conta-Digital
-## Projeto Final da disciplina de BD II
-
-
-
-Premissas:
-- Modelo ER Físico;
-- Dicionário de Dados;
-- Script dos comandos DDL para criação do Banco de dados;
-- Script que popula as tabelas do Banco de dados;
-- Principais consultas mapeadas baseadas em regras de negócio;
-
-
-
-  Link para acesso:
-  [Sistema de Conta Digital](https://github.com/luigimilanez/Sistema-de-Conta-Digital)
-
-
-
-  <h1 align="center"> Conta Digital </h1>
+<h1 align="center"> Projeto Sistema de Conta Digital </h1>
 
 <p align="center">
+  <a HREF="#-integrantes">Contribuintes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;
 </p>
+
+### Contribuintes:
+- Luigi Milanez - [perfil](https://github.com/luigimilanez)
+- Miguel Cimolin - [perfil](https://github.com/miguelcimolin)
+- Jhayne Hanemam - [perfil](https://github.com/JhayneK)
+- Gabriel Della - [perfil](https://github.com/GabrielSouzaDG)
+- Adriano Savi  - [perfil](https://github.com/AdrianoReusSavi)
+- Guilherme Dalmolin - [perfil](https://github.com/GuiDalmolin)
+- Yuri Damin - [perfil](https://github.com/YuriDamin)
+- Roger Henrique - [perfil](https://github.com/RogerHenriqueAlvesRodrigues)
+
+
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- Next.JS
-- Tailwind CSS
+- React
+- JavaScript
 - Git e Github
 - Figma
-
+- Banco de Dados Microsoft Azure
+- MySQL
+  
 ## 💻 Projeto
 
 Projeto Integrador da disciplina de Banco de Dados II do curso de Engenharia de Software da UNISATC.
 Foi proposto através do desenvolvimento de um Sistema simples de conta digital, a solução para cadastro de usuários, acessos ao saldo,
 transferências bancárias, investimentos em carteiras e afins. Com a utilização do MySQL na ferramenta do AZURE MICROSOFT.
 
-### Modelo Conceitual do Banco de Dados
-![Modelo Conceitual](https://github.com/AdrianoReusSavi/Acaiteria/assets/104857615/33221f87-a5d2-4c39-a090-ab4ca08ecbf7)
+### Modelo Físico:
+![fetchdemo](https://github.com/luigimilanez/Sistema-de-Conta-Digital/assets/89088603/f069a068-9c35-478a-bae8-b983a0e22120)
 
+### Dicionário de Dados:
+<code>[Arquivo de dicionário de dados](https://github.com/luigimilanez/Sistema-de-Conta-Digital/blob/main/Dicion%C3%A1rio/Dicionario_de_dados.xlsx)</code>
 
-### Modelo Físico do Banco de Dados
-![Modelo Banco de Dados](https://github.com/AdrianoReusSavi/Acaiteria/assets/103696544/d0b5254c-0f44-4c7c-bf5e-db6c257344c7)
+### Scripts DDL Criação do Database:
+Banco de dados utilizado SQL Server versão 2022 - Azure.<br>
+<code>[Arquivo de criação do banco de dados](https://github.com/luigimilanez/Sistema-de-Conta-Digital/blob/main/Cria%C3%A7%C3%A3oDB/createDatabase.sql)</code>
 
-## 🔖 Layout
+### Scripts Popula tabelas:
+Banco de dados utilizado SQL Server versão 2022 - Azure.<br>
+<code>[Arquivo de insert das tabelas](https://github.com/luigimilanez/Sistema-de-Conta-Digital/blob/main/PopulaTabelas/populaTabela.sql)</code>
 
-### Preview
-![image](https://github.com/AdrianoReusSavi/Acaiteria/assets/104857615/8153ae6e-8c22-4e52-808d-0c36e89c1d64)
+### Objetos de BD (stored procedure, triggers e functions):
+<code>[Pasta dos objetos](https://github.com/luigimilanez/Sistema-de-Conta-Digital/tree/main/Objetos)</code>
+  
+### Código do sistema:
+Linguagem de Programação / Ferramentas: <br>
+<code>[SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)</code>
+<code>[SQL Server Management](https://learn.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms)</code>
+<code>[Python](https://www.python.org/downloads/)</code>
+<code>[PyQt5](https://pypi.org/project/PyQt5/#:~:text=PyQt5%20is%20a%20comprehensive%20set,platforms%20including%20iOS%20and%20Android.)</code>
+<code>[pyodbc](https://pypi.org/project/pyodbc/)</code>
 
+![fetchdemo](https://github.com/luigimilanez/Sistema-de-Conta-Digital/assets/89088603/ff556fa6-fe7b-4c44-bb7d-bfbac8f18ff3)
 
-Você pode visualizar o layout do projeto através do link:
-https://www.figma.com/file/cBsjB1vKR2UAesVzHUQ9Kf/Untitled?type=design&node-id=0-1&mode=design
-
----
-
-
+### Questões de Regras de Negócios:
+01 - Qual seria o número de cadastros atualmente no banco de dados ativos e inativos?<br>
+02 - Qual é número de transações diária efetuada pelos clientes?<br>
+03 - Qual o valor total movimentado anualmente pelos clientes?<br>
+04 - Qual o valor total arrecadado mensalmente com o câmbio de moeda? <br><br>
+<code>[Arquivo com as Consultas](https://github.com/luigimilanez/Sistema-de-Conta-Digital/blob/main/Consultas/RegrasDeNegocio)</code>
